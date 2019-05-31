@@ -164,6 +164,20 @@
      *  the node to the desired target state for the node.
      */
     function setProvisionState(args) {
+	    // TODO: Remove this once we've clicked the button to check the output.
+	    console.log(args);
+
+
+	    // TODO: This will currently show confirmation for all transitions - we only want delete.
+	    // We can update this condition once we see the output from the log above.
+	    if (args.verb) {
+	      var confirm = confirm('This will delete the node.  Are you sure?');
+	      if (!confirm) {
+	        return;
+	      }
+	    }
+	
+	
       if (args.verb === 'clean') {
         cleanNodeService.clean(args.node);
       } else {

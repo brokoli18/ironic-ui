@@ -65,3 +65,6 @@ npm-debug.log
 
 # release notes build
 releasenotes/build
+
+#IDEs
+.idea
